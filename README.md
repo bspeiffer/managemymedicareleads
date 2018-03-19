@@ -18,5 +18,42 @@
 
 6. Populate Module with Lead Img and current lead data in database
     * allow module for each lead per user
+    * loading image while lead image is downloading
     * notification of unprocessed leads
+    
   
+### Draft JSON
+
+    {
+      "users" : {
+         "UserId" : {
+            "name" : "...",
+            "email" : "...",
+            "profilePic" : "...",
+            "password" : "...", --maybe not needed but place holder for email auth
+            "leads" : {
+               "LeadId" : true,
+               "LeadId2" : true
+               }
+          },
+          ...
+      },
+      "leads" : {
+         "LeadId" : {
+            "leadURL" : "...",
+            "name" : "...",
+            "birthDate" : "...",
+            "phone" : "...",
+            "spouseName" : "...",
+            "spousebirthDate" : "...",
+            "addressLine1" : "...",
+            "addressLine2" : "...",
+            "processed" : false
+            "owner" : {
+               "UserId" : true
+               }
+          },
+          ...
+      }
+    }     
+          

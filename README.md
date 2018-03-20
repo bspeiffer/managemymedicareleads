@@ -8,7 +8,7 @@
   
 2. Format Lead Table with generated JSON from Firebase
 
-3. Set up DataTable.js
+3. Set up [DataTables.js]
     * Search and Filter functions for table
 
 4. set up OCR script from bucket on GCStorage/FirebaseStorage to output JSON into Firebase Database
@@ -19,6 +19,7 @@
 6. Populate Module with Lead Img and current lead data in database
     * allow module for each lead per user
     * loading image while lead image is downloading
+    * set up [Magnifier.js] for lead image
     * notification of unprocessed leads
     
   
@@ -57,3 +58,6 @@
       }
     }     
           
+
+[Magnifier.js]: http://mark-rolich.github.io/Magnifier.js/
+[DataTables.js]: https://datatables.net/

@@ -7,6 +7,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/loadtable.js"></script>
 
     <title>Manage My Medicare Leads</title>
   </head>
@@ -31,13 +33,88 @@
   </div>
 </nav>
 
-    <h1>Your Go To Tool to Manage Your Medicare Leads</h1>
-    <h2>Are your paper leads hard to keep track of?</h2>
-    <h2>Do you want to be more efficient with your time?</h2>
+  <div class="container-fliud">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 style="text-align: center">Your Go To Tool to Manage Your Medicare Leads</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Are your paper leads hard to keep track of?</h2>
+      </div>
+      <div class="col-md-6">
+        <h2>Do you want to be more efficient with your time?</h2>
+      </div>
+    </div>
+  </div>
+    
+<br>
+<hr>
+<!-- Button trigger modal -->
+<div class="container justify-content-center">
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+  </button> 
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+<hr>
+
+<!-- Lead Table -->
+<div class="container col-md-10 justify-content-center">
+  <div class="row">
+    <div class="col-md-8">
+      <h2>Your Leads</h2>
+    </div>
+    <div class="col-md-2">
+      <!-- Button trigger table load -->
+      <button type="button" class="btn btn-primary" onclick="show()">Load Leads </button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-10">
+      <h4><i style="color: #ccc"><small>Leads</small></i></h4>
+
+      <table id="leads-table" class="table">
+        <tr>
+          <th>Name</th>
+          <th>Friends</th>
+          <th>Tags</th>
+        </tr>
+      </table>
+      </div>
+    </div>
+  </div>
+
+
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>

@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "ocrtest-196600"
+    "default": "ocrtest-196600",
+    "test": "test-b1a84"
   }
 }

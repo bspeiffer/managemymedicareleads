@@ -5,6 +5,7 @@
   "main": "index.html",
   "dependencies": {
     "eslint": "^4.19.1",
+    "jquery": "^3.3.1",
     "npm": "^5.7.1"
   },
   "devDependencies": {

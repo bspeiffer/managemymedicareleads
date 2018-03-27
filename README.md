@@ -21,10 +21,19 @@
     * set up [Magnifier.js] for lead image
     * notification of unprocessed leads
     
-7. Automatically Upload leads attachments from users GMail to site
-   * Use [gmail2gdrive]
-   * Or simplified version in that repo
+ ~~7. Automatically Upload leads attachments from users GMail to site~~
+
+   ~~* Use [gmail2gdrive]~~
+   
+   ~~* Or simplified version in that repo~~
+   
+   * Leads uploaded to site should be automatically processed by Google Vision *(still needs to happen)*
+   
+7. Automatically scrap data from leads site
+   * on a nightly basis check for new files on leads website
+   * download .pdf files to site
    * Leads uploaded to site should be automatically processed by Google Vision
+   
     
   
 ### Draft JSON

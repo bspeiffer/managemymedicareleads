@@ -4,6 +4,14 @@
   "description": "Manage your leads digitally",
   "main": "index.html",
   "dependencies": {
+    "async": "^2.1.2",
+    "express": "^4.14.0",
+    "nightmare": "^2.8.1",
+    "nightmare-download-manager": "^0.2.2",
+    "nightmare-inline-download": "^0.2.2",
+    "nightmare-upload": "^0.1.1",
+    "snyk": "^1.41.1",
+    "vo": "^4.0.2",
     "eslint": "^4.19.1",
     "jquery": "^3.3.1",
     "npm": "^5.7.1"

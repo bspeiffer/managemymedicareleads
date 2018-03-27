@@ -9,15 +9,15 @@ var urlLeads = String(url) + 'ScannedLeads.aspx'
 
 var thisfunction = function () {
   var result = []
-  var href = {}
+  var hrefs = {}
   var list = document.querySelectorAll('a.PDF')
   list.forEach(function (item) {
-    result.push(item.href)
+    result.push(item.ref)
   })
   result.forEach(function (link) {
-    href[link] = false
+    hrefs[link] = false
   })
-  return href
+  return hrefs
 }
 
 vo(run)(function (err, result) {
@@ -25,7 +25,7 @@ vo(run)(function (err, result) {
 })
 
 function * run () {
-  var nightmare = new Nightmare({ show: true })
+  var nightmare = new Nightmare({ show: false })
 
   yield nightmare
     .goto(url)
@@ -35,13 +35,11 @@ function * run () {
     .wait('#hplScannedLeads')
     .goto(urlLeads)
     .then(() => {
-      return nightmare.end()
-    })
-    .catch(error => {
-      console.log(error)
+      console.log('Logged In')
     })
 
   yield nightmare.evaluate(thisfunction).then(function (list) {
+    // for each in list .click('a[href='+list+']')
     console.log(list)
   })
 

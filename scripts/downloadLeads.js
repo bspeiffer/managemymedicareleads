@@ -1,34 +1,34 @@
-var Nightmare = require('nightmare');
-require('nightmare-download-manager')(Nightmare);
+var Nightmare = require('nightmare')
+require('nightmare-download-manager')(Nightmare)
 
-var nightmare = Nightmare({ show: false });
+var nightmare = new Nightmare({ show: false })
 
-var username = '103016';
-var password = 'epeiff531';
-var url = 'https://online.tlleadmanager2.com/MyAccountLogin/';
-var urlLeads = String(url) + 'ScannedLeads.aspx';
-var hrefs = {};
+var username = '103016'
+var password = 'epeiff531'
+var url = 'https://online.tlleadmanager2.com/MyAccountLogin/'
+var urlLeads = String(url) + 'ScannedLeads.aspx'
 
-function getFormattedTime() {
-  var today = new Date();
-  var y = today.getFullYear();
-  var m = today.getMonth();
-  var d = today.getDate();
-  var h = today.getHours();
-  var min = today.getMinutes();
-  var s = today.getSeconds();
-  return m + '-' + d + '-' + y + '_' + h + '-' + min + '-' + s;
+function getFormattedTime () {
+  var today = new Date()
+  var y = today.getFullYear()
+  var m = today.getMonth()
+  var d = today.getDate()
+  var h = today.getHours()
+  var min = today.getMinutes()
+  var s = today.getSeconds()
+  return m + '-' + d + '-' + y + '_' + h + '-' + min + '-' + s
 }
-var date = getFormattedTime();
+var date = getFormattedTime()
 
 nightmare.on('download', (state, downloadItem) => {
-  if (state === 'started')
+  if (state === 'started') {
     nightmare.emit(
       'download',
       username + '/leads/' + date + '.pdf',
       downloadItem
-    );
-});
+    )
+  }
+})
 
 nightmare
   .downloadManager()
@@ -54,9 +54,9 @@ nightmare
   .waitDownloadsComplete()
   // })
   .then(() => {
-    console.log('Download Success');
-    return nightmare.end();
+    console.log('Download Success')
+    return nightmare.end()
   })
   .catch(error => {
-    console.error('Search failed:', error);
-  });
+    console.error('Search failed:', error)
+  })

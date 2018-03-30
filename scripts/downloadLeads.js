@@ -7,6 +7,7 @@ var username = '103016'
 var password = 'epeiff531'
 var url = 'https://online.tlleadmanager2.com/MyAccountLogin/'
 var urlLeads = String(url) + 'ScannedLeads.aspx'
+var lead = 'ViewFiles.aspx?FID=72076'
 
 function getFormattedTime () {
   var today = new Date()
@@ -50,7 +51,7 @@ nightmare
   // })
   // .then(() => {
   //   return nightmare
-  .click('a[href="ViewFiles.aspx?FID=83123"]')
+  .click('a[href="' + lead + '"]')
   .waitDownloadsComplete()
   // })
   .then(() => {
